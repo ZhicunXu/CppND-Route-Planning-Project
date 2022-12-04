@@ -54,7 +54,7 @@ void RoutePlanner::AddNeighbors(RouteModel::Node *current_node) {
 // - Return the pointer.
 
 bool Compare(const RouteModel::Node* a, const RouteModel::Node* b) {
-  return (a->g_value + a->h_value) > (b->g_value + b->g_value); 
+  return (a->g_value + a->h_value) > (b->g_value + b->h_value); 
 }
 
 RouteModel::Node *RoutePlanner::NextNode() {
